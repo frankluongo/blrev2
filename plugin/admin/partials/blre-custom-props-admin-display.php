@@ -5,11 +5,11 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       http://example.com
+ * @link       frankluongo.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin/partials
+ * @package    Blre_Custom_Props
+ * @subpackage Blre_Custom_Props/admin/partials
  */
 ?>
 
