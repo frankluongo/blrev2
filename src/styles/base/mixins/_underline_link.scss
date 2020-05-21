@@ -1,0 +1,40 @@
+@mixin underline-link($color: primaryColor(4)) {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+
+    position: absolute;
+    bottom: -3px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: $color;
+  }
+
+  &:before {
+    left: 0;
+    transform-origin: left;
+  }
+
+  &:after {
+    right: 0;
+    transform-origin: right;
+    @include transition($prop: width);
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+      @include transition($prop: width);
+    }
+
+    &:after {
+      background-color: transparent;
+      width: 100%;
+      transition: all 0s none;
+    }
+  }
+}

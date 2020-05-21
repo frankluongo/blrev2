@@ -1,0 +1,8 @@
+.link {
+  color: primaryColor(4);
+  font-weight: bold;
+  text-decoration: none;
+  &.underline {
+    @include underline-link;
+  }
+}

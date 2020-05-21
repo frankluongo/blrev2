@@ -1,0 +1,11 @@
+@mixin font-size-increments($mediumSize, $largeSize: null) {
+  @include breakpoint(medium) {
+    font-size: $mediumSize;
+  }
+
+  @if $largeSize != null {
+    @include breakpoint(medium) {
+      font-size: $largeSize;
+    }
+  }
+}

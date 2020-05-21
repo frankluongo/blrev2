@@ -1,0 +1,9 @@
+@mixin bar($color, $shadow: $setting-orange-shadow) {
+  display: block;
+  width: 8rem;
+  height: 0.5rem;
+
+  background-color: $color;
+  box-shadow: $shadow;
+  content: "";
+}

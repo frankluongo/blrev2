@@ -1,0 +1,27 @@
+@mixin button-theme(
+  $bgColor: primaryColor(4),
+  $borderColor: primaryColor(4),
+  $hoverBorderColor: grayColor(3),
+  $hoverShadowColor: grayColor(3),
+  $shadowColor: primaryColor(6),
+  $textColor: grayColor(1)
+) {
+  color: $textColor;
+
+  background-color: $bgColor;
+  border: 1px solid $borderColor;
+  box-shadow: 0 3px 0 0 $shadowColor;
+
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  &:hover {
+    color: $bgColor;
+
+    background-color: $textColor;
+    border: 1px solid $hoverBorderColor;
+    box-shadow: 0 3px 0 0 $hoverShadowColor;
+  }
+}

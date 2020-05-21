@@ -1,0 +1,6 @@
+@mixin shadow-maker($type) {
+}
+
+@mixin orange-shadow($type) {
+  #{$type}-shadow: 5px 4px 0 rgba(255, 100, 97, 0.35);
+}

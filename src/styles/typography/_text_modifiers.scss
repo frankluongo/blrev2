@@ -1,0 +1,10 @@
+@mixin bold {
+  font-weight: 700;
+}
+
+strong,
+.strong,
+b,
+.b {
+  @include bold;
+}

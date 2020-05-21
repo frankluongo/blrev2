@@ -1,0 +1,28 @@
+$paragraphs: ("p", ".p");
+
+#{$paragraphs} {
+  max-width: $settings-max-paragraph-length;
+
+  font-size: 0.875rem;
+  line-height: 1.618;
+  @include font-size-increments($mediumSize: 1rem);
+
+  &.small {
+    font-size: 0.75rem;
+    @include font-size-increments($mediumSize: 0.875rem);
+  }
+
+  &.large {
+    font-size: 1rem;
+    font-weight: bold;
+    @include font-size-increments($mediumSize: 1.5rem);
+  }
+}
+
+.paragraph--large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  @include font-size-increments($mediumSize: 2rem);
+}

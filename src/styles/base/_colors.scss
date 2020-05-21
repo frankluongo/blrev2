@@ -1,0 +1,69 @@
+$primary-color: #e75c5a;
+$secondary-color: #d4c275;
+$tertiary-color: #1b4f98;
+
+$primary-colorscale: (
+  1: #ff9b99,
+  2: #ff8280,
+  3: #ff6461,
+  4: $primary-color,
+  5: #d74947,
+  6: #c44240,
+  7: #ac3b39,
+);
+$secondary-colorscale: (
+  1: #ffe98d,
+  2: #f5e087,
+  3: #e3d07d,
+  4: $secondary-color,
+  5: #ba9d54,
+  6: #a67e33,
+  7: #8c6a26,
+);
+$tertiary-colorscale: (
+  1: #2e85ff,
+  2: #2875e0,
+  3: #2264bf,
+  4: $tertiary-color,
+  5: #16407a,
+  6: #113361,
+  7: #0b2140,
+);
+
+$gray-colorscale: (
+  1: hsl(0%, 0%, 100%),
+  2: hsl(180, 0%, 98%),
+  3: hsl(180, 0%, 93%),
+  4: hsl(180, 5%, 69%),
+  5: hsl(180, 3%, 54%),
+  6: hsl(180, 2%, 44%),
+  7: hsl(180, 2%, 34%),
+  8: hsl(180, 2%, 25%),
+  9: hsl(180, 3%, 15%),
+  10: hsl(0%, 0%, 0%),
+);
+
+$gray: (
+  1: #f7f8f8,
+  2: #ebefef,
+  3: #d0d8d8,
+  4: #abb3b3,
+  5: #868c8c,
+  6: #6e7373,
+  7: #555959,
+  8: #3d4040,
+  9: #242626,
+);
+
+@function primaryColor($num: 4) {
+  @return map-get($primary-colorscale, $num);
+}
+@function secondaryColor($num: 4) {
+  @return map-get($secondary-colorscale, $num);
+}
+@function tertiaryColor($num: 4) {
+  @return map-get($tertiary-colorscale, $num);
+}
+@function grayColor($num: 4) {
+  @return map-get($gray-colorscale, $num);
+}

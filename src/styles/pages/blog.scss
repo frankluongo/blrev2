@@ -1,0 +1,13 @@
+@import "../base/all";
+
+.blog-page__header {
+  padding-top: 2rem;
+
+  text-align: center;
+}
+
+@include breakpoint(medium) {
+  .blog-page__header {
+    padding-top: 4rem;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../base/all";
+
+.four-oh-four__heading {
+  padding: 2rem;
+
+  text-align: center;
+}
+
+.four-oh-four__gif img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.four-oh-four__gif,
+.four-oh-four__content {
+  padding-bottom: 2rem;
+}
+
+.four-oh-four__content p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.four-oh-four__content p + p {
+  margin-top: 1rem;
+}
+
+@include breakpoint(medium) {
+  .four-oh-four__heading {
+    padding: 4rem;
+  }
+
+  .four-oh-four__gif,
+  .four-oh-four__content {
+    padding-bottom: 4rem;
+  }
+
+  .four-oh-four__content p + p {
+    margin-top: 2rem;
+  }
+}

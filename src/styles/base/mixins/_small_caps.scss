@@ -1,0 +1,7 @@
+@mixin small-caps {
+  &.small-caps {
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+  }
+}

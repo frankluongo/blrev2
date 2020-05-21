@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+}
+
+@each $break, $value in $setting-breakpoint-sizes {
+  @include breakpoint($break) {
+    .cols-#{$break}-1 {
+      grid-template-columns: 1fr;
+    }
+
+    .cols-#{$break}-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cols-#{$break}-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cols-#{$break}-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cols-#{$break}-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .cols-#{$break}-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .cols-#{$break}-left-sidebar {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .cols-#{$break}-right-sidebar {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+.span-6 {
+  grid-column: span 6;
+}

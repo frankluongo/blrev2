@@ -1,0 +1,60 @@
+h1,
+.h1 {
+  font-family: map-get($setting-fonts, primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0;
+
+  @include font-size-increments($mediumSize: 6rem);
+
+  &.small {
+    font-size: 2.75rem;
+
+    @include font-size-increments($mediumSize: 3rem);
+  }
+}
+
+h2,
+.h2 {
+  font-family: map-get($setting-fonts, primary);
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @include small-caps;
+
+  @include font-size-increments($mediumSize: 5rem);
+}
+
+.h2--dark {
+  color: map-get($gray, 8);
+  text-shadow: $setting-orange-shadow;
+}
+
+.h2--dark:after {
+  @include bar(map-get($gray, 8));
+  display: block;
+  margin-top: 1rem;
+}
+
+.h2--light {
+  color: grayColor(1);
+  text-shadow: $setting-black-shadow;
+}
+
+.h2--light:after {
+  @include bar(grayColor(1), $setting-black-shadow);
+  display: block;
+  margin-top: 1rem;
+}
+
+h3,
+.h3 {
+  font-family: map-get($setting-fonts, secondary);
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  @include font-size-increments($mediumSize: 1.5rem, $largeSize: 2rem);
+}
