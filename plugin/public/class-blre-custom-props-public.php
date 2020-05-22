@@ -7,9 +7,9 @@ class Blre_Custom_Props_Public {
 		$this->version = $version;
 	}
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/blre-custom-props-public.css', array(), $this->version, 'all' );
+
 	}
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/blre-custom-props-public.js', array( 'jquery' ), $this->version, false );
+
 	}
 }

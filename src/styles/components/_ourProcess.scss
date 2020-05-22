@@ -1,0 +1,19 @@
+.our-process {
+  @include block-spacing("padding", 2rem);
+}
+
+.our-process__container {
+  display: grid;
+  gap: 2rem;
+}
+
+@include breakpoint(medium) {
+  .our-process {
+    @include block-spacing("padding", 6rem);
+  }
+
+  .our-process__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+}

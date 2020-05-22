@@ -1,0 +1,32 @@
+.divider {
+  @include block-spacing("padding", 2rem);
+}
+
+.divider__rule {
+  height: 0.25rem;
+  width: 80%;
+
+  border: none;
+}
+
+.divider.dark {
+  background-color: grayColor(8);
+}
+
+.divider__rule.dark {
+  background-color: grayColor(2);
+}
+
+.divider.light {
+  background-color: grayColor(2);
+}
+
+.divider__rule.light {
+  background-color: grayColor(8);
+}
+
+@include breakpoint(medium) {
+  .divider {
+    @include block-spacing("padding", 3rem);
+  }
+}

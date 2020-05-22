@@ -1,0 +1,140 @@
+.process-step {
+  padding: 1rem;
+
+  @include transition;
+}
+
+.process-step--dark {
+  position: relative;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  background-color: map-get($gray, 9);
+}
+
+.process-step__background {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  background-size: 50%;
+  opacity: 0.3;
+}
+
+.process-step__content {
+  position: relative;
+}
+
+.process-step__heading {
+  text-shadow: $setting-orange-shadow;
+}
+
+.process-step__heading:after {
+  box-shadow: $setting-orange-shadow;
+}
+
+.process-step-heading__icon svg {
+  height: 2rem;
+
+  fill: grayColor(1);
+  filter: drop-shadow($setting-orange-shadow);
+}
+
+.process-step__heading--small {
+  font-size: 1.5rem;
+}
+
+.process-step__title {
+  align-items: center;
+  display: flex;
+
+  margin-bottom: 2rem;
+}
+
+.process-step__number {
+  position: relative;
+
+  display: flex;
+  flex: 0 1 6rem;
+  align-items: center;
+  justify-content: center;
+
+  height: 6rem;
+  min-width: 6rem;
+  width: 6rem;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.25rem solid primaryColor(4);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.process-step-number__text {
+  position: relative;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+
+  color: grayColor(1);
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 700;
+  text-shadow: $setting-black-shadow;
+
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.process-step-title__heading {
+  flex: 0 1 calc(100% - 7rem);
+  padding-left: 1rem;
+
+  color: map-get($gray, 8);
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.process-step__text p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.process-step__button {
+  margin-top: 2rem;
+}
+
+@include breakpoint(medium) {
+  .our-process__steps-container:hover .our-process-step {
+    opacity: 0.5;
+  }
+
+  .our-process__steps-container:hover .our-process-step:hover {
+    opacity: 1;
+  }
+
+  .process-step {
+    padding: 6rem;
+  }
+
+  .process-step-heading__icon svg {
+    height: 3.5rem;
+  }
+
+  .process-step__heading--small,
+  .process-step-title__heading {
+    font-size: 3rem;
+  }
+
+  .process-step__text p {
+    font-size: 1.5rem;
+  }
+}

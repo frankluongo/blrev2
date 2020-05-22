@@ -1,0 +1,41 @@
+.header {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+
+  padding: 1rem 0;
+
+  background-color: grayColor(1);
+  border-bottom: 1px solid grayColor(3);
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__logo .blre-logo {
+  height: 2rem;
+
+  fill: map-get($gray, 8);
+}
+
+@include breakpoint("large-down") {
+  .header__navigation {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@include breakpoint("large") {
+  .header__content {
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .header__logo .blre-logo {
+    height: 3rem;
+  }
+}

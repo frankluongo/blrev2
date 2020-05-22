@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(80vh - 4rem);
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero.large .hero__container {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero__background-gradient,
+.hero__background-darken {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.hero__background-gradient {
+  background: linear-gradient(244deg, $tertiary-color 6%, $primary-color 100%);
+  opacity: 0.75;
+}
+
+.hero__background-darken {
+  background: map-get($gray, 8);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.hero__container {
+  position: relative;
+}
+
+@include breakpoint(medium-down) {
+  .hero.large {
+    @include block-spacing("padding", 2rem);
+    height: auto;
+  }
+
+  .hero.large .hero__container {
+    .cash-offer {
+      order: 1;
+    }
+  }
+}
+
+@include breakpoint(medium) {
+  .hero {
+    &.default {
+      max-height: 30rem;
+    }
+
+    &.large {
+      max-height: 50rem;
+    }
+  }
+
+  .hero.large .hero__container {
+    gap: 2rem;
+    grid-template-columns: auto auto;
+    align-items: center;
+
+    text-align: left;
+
+    p {
+      margin: 0;
+    }
+  }
+}

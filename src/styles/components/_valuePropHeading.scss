@@ -1,0 +1,36 @@
+.value-prop--heading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.value-prop-heading__icon svg {
+  height: 2rem;
+
+  fill: grayColor(1);
+  filter: drop-shadow($setting-black-shadow);
+}
+
+@include breakpoint(medium) {
+  .value-prop--heading {
+    padding: 3rem;
+    grid-column: span 2;
+
+    background: #ff6461;
+    background-image: radial-gradient(
+      circle at center,
+      rgba(231, 91, 88, 0) 50%,
+      #d64a47 100%
+    );
+  }
+
+  .value-prop--heading:hover {
+    transform: scale(1);
+  }
+
+  .value-prop-heading__icon svg {
+    height: 3.5rem;
+  }
+}

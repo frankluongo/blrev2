@@ -1,0 +1,44 @@
+.value-prop {
+  padding: 1rem;
+
+  background-color: grayColor(1);
+  @include drop-shadow-elevation(2);
+  @include transition;
+}
+
+.value-prop__image {
+  @include inline-spacing("margin", auto);
+  margin-bottom: 1rem;
+  height: 14rem;
+  width: 14rem;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 1px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.value-prop__text {
+  color: map-get($gray, 8);
+  font-family: map-get($setting-fonts, secondary);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+@include breakpoint(medium) {
+  .value-prop {
+    padding: 2rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .value-prop__image {
+    margin-bottom: 2rem;
+  }
+}

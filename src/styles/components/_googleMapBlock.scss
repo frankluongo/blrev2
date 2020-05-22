@@ -1,0 +1,31 @@
+.google-map {
+  display: grid;
+  gap: 1rem;
+}
+
+.google-map__wrapper {
+  position: relative;
+  min-height: 12rem;
+}
+
+.google-map__wrapper iframe {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+}
+
+@include breakpoint(medium) {
+  .google-map {
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .google-map__wrapper {
+    min-height: 24rem;
+  }
+}

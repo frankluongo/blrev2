@@ -1,0 +1,41 @@
+.navigation-link {
+  position: relative;
+
+  display: block;
+
+  color: primaryColor(5);
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include transition;
+  @include underline-link;
+}
+
+.navigation-list__item:first-of-type .navigation-link {
+  padding: 1rem;
+
+  color: grayColor(1);
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+
+  background-color: primaryColor(4);
+  border: 1px solid primaryColor(4);
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 0 0 primaryColor(6);
+
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  &:hover {
+    color: primaryColor(4);
+
+    background-color: grayColor(1);
+    border: 1px solid grayColor(3);
+    box-shadow: 0 3px 0 0 grayColor(3);
+  }
+}

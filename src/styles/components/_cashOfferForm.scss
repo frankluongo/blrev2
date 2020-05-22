@@ -1,0 +1,73 @@
+.cash-offer-form {
+  @include block-spacing("padding", 1rem);
+
+  background-color: tertiaryColor(3);
+}
+
+.cash-offer-form__inner {
+  position: relative;
+
+  @include block-spacing("padding", 3rem);
+
+  background-color: grayColor(1);
+}
+
+.cash-offer-form-inner__background {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  background-size: 30%;
+  opacity: 0.3;
+}
+
+.cash-offer-form__container {
+  position: relative;
+
+  display: grid;
+  gap: 2rem;
+}
+
+.cash-offer-form__form-wrapper,
+.cash-offer-form__heading-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cash-offer-form__icon svg {
+  margin-left: 1rem;
+  height: 2rem;
+
+  fill: map-get($gray, 8);
+  filter: drop-shadow($setting-orange-shadow);
+}
+
+@include breakpoint("medium-down") {
+  .cash-offer-form__heading {
+    flex: 0 1 17rem;
+  }
+}
+
+@include breakpoint(medium) {
+  .cash-offer-form {
+    @include block-spacing("padding", 9rem);
+  }
+
+  .cash-offer-form__container {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .cash-offer-form__form {
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+
+    transform: scale(1.2);
+  }
+
+  .cash-offer-form__icon svg {
+    height: 3.5rem;
+  }
+}

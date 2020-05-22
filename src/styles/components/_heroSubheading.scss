@@ -1,0 +1,13 @@
+.hero-subheading {
+  font-family: map-get($setting-fonts, secondary);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@include breakpoint(medium) {
+  .hero-subheading {
+    font-size: 2rem;
+  }
+}

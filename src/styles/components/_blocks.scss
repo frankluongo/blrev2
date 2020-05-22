@@ -1,0 +1,39 @@
+$colors: (
+  "white": grayColor(1),
+  "light-gray": map-get($gray, 1),
+  "dark": map-get($gray, 9),
+  "orange": $primary-color,
+  "blue": $tertiary-color,
+);
+
+.block {
+  @include block-spacing("padding", 2rem);
+}
+
+.block h2:not(.h2) {
+  font-size: 1.75rem;
+  text-transform: capitalize;
+}
+
+.block a {
+  @extend .link;
+}
+
+@each $color, $colorVar in $colors {
+  .block--bg-#{$color} {
+    background-color: $colorVar;
+  }
+  .block--text-#{$color} {
+    color: $colorVar;
+  }
+}
+
+@include breakpoint("medium") {
+  .block {
+    @include block-spacing("padding", 4rem);
+  }
+
+  .block h2:not(.h2) {
+    font-size: 2.5rem;
+  }
+}

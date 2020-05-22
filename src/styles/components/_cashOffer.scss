@@ -1,0 +1,20 @@
+.cash-offer {
+  max-width: 18rem;
+  padding: 1rem;
+  @include inline-spacing("margin", auto);
+
+  background-color: grayColor(1);
+  border-radius: 0.5rem;
+  @include drop-shadow-elevation(2);
+}
+
+.cash-offer iframe {
+  min-height: 26rem;
+  max-width: 100%;
+}
+
+@include breakpoint(small) {
+  .cash-offer {
+    max-width: 24rem;
+  }
+}
