@@ -1,0 +1,40 @@
+.formhero {
+  @include block-spacing("padding", 2rem);
+
+  background-color: map-get($gray, 1);
+}
+
+.formhero__container {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.formhero-title__neighborhood {
+  color: $primary-color;
+}
+
+@include breakpoint("medium-down") {
+  .formhero__container {
+    text-align: center;
+  }
+
+  .formhero-container__title {
+    margin-bottom: 1rem;
+  }
+
+  .formhero-container__offer-form {
+    order: 1;
+  }
+}
+
+@include breakpoint(medium) {
+  .formhero {
+    @include block-spacing("padding", 4rem);
+  }
+
+  .formhero__container {
+    gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+  }
+}

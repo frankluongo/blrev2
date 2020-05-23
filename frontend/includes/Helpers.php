@@ -21,3 +21,12 @@
     $raw_date = date_create($date);
     echo date_format($raw_date, 'm/d/Y');
   }
+
+  function getBlocks($blocks) {
+    if ($blocks) {
+      foreach ($blocks as &$block) {
+        $blockName = $block['acf_fc_layout'];
+        include(locate_template("components/$blockName.php"));
+      }
+    }
+  }
