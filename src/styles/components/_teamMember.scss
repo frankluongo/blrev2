@@ -1,0 +1,82 @@
+.team-member {
+  padding: 1rem;
+
+  background-color: grayColor(1);
+}
+
+.team-member__image {
+  padding-top: 100%;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//
+// Grid
+//
+
+.team-member {
+  display: grid;
+  align-content: flex-start;
+  gap: 1rem;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-areas:
+    "teamMemberImage teamMemberName teamMemberName"
+    "teamMemberImage teamMemberTitle teamMemberTitle"
+    "teamMemberImage teamMemberDescription teamMemberDescription"
+    "teamMemberPhone teamMemberPhone teamMemberPhone"
+    "teamMemberEmail teamMemberEmail teamMemberEmail";
+}
+
+.team-member__image {
+  grid-area: teamMemberImage;
+  align-self: flex-start;
+}
+.team-member__name {
+  grid-area: teamMemberName;
+
+  color: primaryColor(4);
+}
+.team-member__title {
+  grid-area: teamMemberTitle;
+}
+.team-member__description {
+  grid-area: teamMemberDescription;
+}
+.team-member__phone-number {
+  grid-area: teamMemberPhone;
+}
+.team-member__email-address {
+  grid-area: teamMemberEmail;
+}
+
+@include breakpoint(small) {
+  .team-member {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas:
+      "teamMemberImage . ."
+      "teamMemberName teamMemberName teamMemberName"
+      "teamMemberTitle teamMemberTitle teamMemberTitle"
+      "teamMemberDescription teamMemberDescription teamMemberDescription"
+      "teamMemberPhone teamMemberPhone teamMemberPhone"
+      "teamMemberEmail teamMemberEmail teamMemberEmail";
+  }
+}
+
+@include breakpoint(medium) {
+  .team-member {
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "teamMemberImage teamMemberName teamMemberName"
+      "teamMemberImage teamMemberTitle teamMemberTitle"
+      "teamMemberImage teamMemberDescription teamMemberDescription"
+      "teamMemberPhone teamMemberEmail .";
+  }
+
+  .team-member {
+    padding: 2rem;
+  }
+}

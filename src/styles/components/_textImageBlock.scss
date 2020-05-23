@@ -1,0 +1,27 @@
+.text-image {
+  display: grid;
+  gap: 1rem;
+}
+
+.text-image__image {
+  min-height: 12rem;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@include breakpoint(medium) {
+  .text-image {
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .text-image--imageRight .text-image__image {
+    order: 1;
+  }
+
+  .text-image__image {
+    min-height: 24rem;
+  }
+}

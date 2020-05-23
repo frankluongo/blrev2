@@ -1,0 +1,52 @@
+.footer__contact {
+  display: flex;
+  justify-content: center;
+
+  border-right: 0.5rem solid map-get($gray, 3);
+}
+
+.footer-contact__inner {
+  padding: 1rem;
+}
+
+.footer-contact__header {
+  align-items: center;
+  display: flex;
+
+  margin-bottom: 1rem;
+}
+
+.footer-contact__header svg {
+  height: 2rem;
+
+  fill: map-get($gray, 8);
+}
+
+.footer-contact__title {
+  margin-left: 1rem;
+  color: map-get($gray, 8);
+  font-family: map-get($setting-fonts, primary);
+}
+
+.footer-contact__content {
+  margin-bottom: 1rem;
+}
+
+.footer-contact__content:after {
+  @include bar(map-get($gray, 8));
+  margin-top: 1rem;
+
+  box-shadow: none;
+}
+
+.footer-contact__social-links {
+  padding-bottom: 1rem;
+}
+
+.footer-contact__copyright {
+  color: map-get($gray, 8);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}

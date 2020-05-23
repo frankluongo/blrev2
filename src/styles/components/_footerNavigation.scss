@@ -1,0 +1,17 @@
+.footer-navigation__link {
+  display: block;
+}
+
+@include breakpoint(medium) {
+  .footer__navigation {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+  }
+
+  .footer-navigation__item {
+    align-items: center;
+    display: flex;
+  }
+}

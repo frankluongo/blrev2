@@ -1,0 +1,42 @@
+.footer__border {
+  padding-top: 1rem;
+
+  background-color: primaryColor(4);
+}
+
+.footer__content {
+  position: relative;
+
+  @include block-spacing("padding", 3rem);
+
+  background-color: grayColor(1);
+}
+
+.footer-content__background {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  background-size: 20%;
+  opacity: 0.3;
+}
+
+.footer-content__container {
+  position: relative;
+
+  display: grid;
+  gap: 1rem;
+}
+
+@include breakpoint(medium) {
+  .footer__content {
+    @include block-spacing("padding", 6rem);
+  }
+
+  .footer-content__container {
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

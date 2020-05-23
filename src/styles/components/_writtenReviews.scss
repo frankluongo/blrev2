@@ -1,0 +1,17 @@
+.written-reviews {
+  @include block-spacing("padding", 2rem);
+}
+
+.written-reviews__container {
+  display: grid;
+  gap: 1rem;
+}
+
+@include breakpoint(medium) {
+  .written-reviews {
+    @include block-spacing("padding", 4rem);
+  }
+  .written-reviews__container {
+    gap: 2rem;
+  }
+}

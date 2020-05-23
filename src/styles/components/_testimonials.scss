@@ -1,0 +1,19 @@
+.testimonials {
+  @include block-spacing("padding", 2rem);
+
+  background-color: grayColor(2);
+}
+
+.testimonials__container {
+  gap: 1rem;
+}
+
+@include breakpoint(medium) {
+  .testimonials {
+    @include block-spacing("padding", 4rem);
+  }
+
+  .testimonials__container {
+    gap: 2rem;
+  }
+}

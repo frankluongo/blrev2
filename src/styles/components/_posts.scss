@@ -1,0 +1,15 @@
+.posts {
+  display: grid;
+  gap: 1rem;
+
+  @include block-spacing("padding", 2rem);
+}
+
+@include breakpoint(medium) {
+  .posts {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    @include block-spacing("padding", 4rem);
+  }
+}

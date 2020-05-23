@@ -1,0 +1,22 @@
+.our-team {
+  @include block-spacing("padding", 2rem);
+
+  background-color: grayColor(3);
+}
+
+.our-team__container {
+  gap: 1rem;
+  @include breakpoint(medium) {
+    gap: 2rem;
+  }
+}
+
+@include breakpoint("medium") {
+  .our-team {
+    @include block-spacing("padding", 4rem);
+  }
+
+  .our-team__container {
+    gap: 2rem;
+  }
+}

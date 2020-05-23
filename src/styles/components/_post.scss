@@ -1,0 +1,31 @@
+.post {
+  border: 1px solid primaryColor();
+}
+
+.post__inner {
+  display: block;
+  padding: 1rem;
+
+  text-decoration: none;
+}
+
+.post__title {
+  margin-bottom: 1rem;
+
+  color: primaryColor();
+}
+
+.post__text,
+.post__excerpt p {
+  color: grayColor(9);
+}
+
+.post__excerpt {
+  margin-top: 1rem;
+}
+
+@include breakpoint(medium) {
+  .post__inner {
+    padding: 2rem;
+  }
+}
