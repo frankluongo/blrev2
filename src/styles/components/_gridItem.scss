@@ -1,0 +1,16 @@
+.grid-item {
+  padding: 1rem;
+  flex: 1 1 100%;
+}
+
+@include breakpoint(small) {
+  .grid-item {
+    flex-basis: 50%;
+  }
+}
+
+@include breakpoint(large) {
+  .grid-item {
+    flex: 1 1 100%;
+  }
+}
