@@ -1,4 +1,3 @@
-<?php console_log($block); ?>
 <section class="block block--bg-<?php echo $block['bgColor'] ?> block--text-<?php echo $block['textColor']; ?>">
   <div class="container">
     <div class="grid-block">
