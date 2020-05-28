@@ -12,7 +12,7 @@
     "cert:setup": "cd cli && ./setup-hosts-file.sh",
     "watch": "webpack --watch --env.MODE=development",
     "build": "webpack --env.MODE=development",
-    "deploy": "webpack --env.MODE=production && cp -R frontend brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties"
+    "deploy": "webpack --env.MODE=production && zip -r brotherlyloveproperties.zip backend/wp-content/themes/brotherlyloveproperties"
   },
   "repository": {
     "type": "git",
