@@ -50,6 +50,10 @@
     height: auto;
   }
 
+  p {
+    max-width: $settings-max-paragraph-length;
+  }
+
   @include breakpoint(medium) {
     h2 {
       font-size: 2rem;

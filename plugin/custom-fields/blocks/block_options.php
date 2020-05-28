@@ -83,6 +83,18 @@ class BlockOptions {
     );
   }
 
+  public function slider($key, $label) {
+    return array(
+      'key' => $key,
+      'label' => "$label Column Width",
+      'name' => "columnWidth$label",
+      'type' => 'range',
+      'default_value' => 3,
+			'min' => 1,
+			'max' => 6,
+    );
+  }
+
   public function textColor($key) {
     return array(
       'key' => $key,

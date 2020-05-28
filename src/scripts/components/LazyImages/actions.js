@@ -1,4 +1,4 @@
-import { lazyBgImages, lazyFrames } from "./elements";
+import { lazyBgImages, lazyFrames, lazyImages } from "./elements";
 
 export function loadBgImages() {
   lazyBgImages().forEach(loadBgImage);
@@ -7,6 +7,15 @@ export function loadBgImages() {
 function loadBgImage(imgElement) {
   const bgImgSrc = imgElement.getAttribute("data-img-src");
   imgElement.style.backgroundImage = `url(${bgImgSrc})`;
+}
+
+export function loadImages() {
+  lazyImages().forEach(loadImage);
+}
+
+function loadImage(imgElement) {
+  const imgSrc = imgElement.getAttribute("data-src");
+  imgElement.src = imgSrc;
 }
 
 export function loadiFrames() {

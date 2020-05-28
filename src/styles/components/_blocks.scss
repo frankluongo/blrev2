@@ -15,6 +15,10 @@ $colors: (
   text-transform: capitalize;
 }
 
+.block h3 {
+  margin-bottom: 1rem;
+}
+
 .block a {
   @extend .link;
 }

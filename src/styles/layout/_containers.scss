@@ -6,7 +6,7 @@
 }
 
 .container--content {
-  max-width: 38rem;
+  max-width: $settings-max-paragraph-length;
 }
 
 .container.full {

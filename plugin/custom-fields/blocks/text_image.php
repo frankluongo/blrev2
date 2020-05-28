@@ -15,6 +15,8 @@ $text_image_block_content = array(
     $blockOptions->blockId('field_text_image_block_id', $text_image_block_id),
     $blockOptions->bgColor('field_text_image_block_bg_color'),
     $blockOptions->textColor('field_text_image_block_text_color'),
+    $blockOptions->slider('field_text_image_block_image_width', 'Image'),
+    $blockOptions->slider('field_text_image_block_text_width', 'Text'),
     $blockOptions->imagePosition('field_text_image_block_image_position'),
     $blockOptions->image('field_text_image_block_image'),
     $blockOptions->textContent('field_text_image_block_text_content')
