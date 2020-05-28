@@ -3,7 +3,7 @@
 /**
  *
  * @link              frankluongo.com
- * @since             1.1.0
+ * @since             1.2.0
  * @package           Blre_Custom_Props
  *
  * @wordpress-plugin
