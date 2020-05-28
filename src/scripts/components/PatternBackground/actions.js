@@ -1,5 +1,5 @@
-import lightPattern from "../../assets/lightPattern.svg";
-import darkPattern from "../../assets/darkPattern.svg";
+import lightPattern from "../../../assets/lightPattern.svg";
+import darkPattern from "../../../assets/darkPattern.svg";
 
 const DEFAULT_BASE_PATH = "/wp-content/themes/brotherlyloveproperties/assets/";
 

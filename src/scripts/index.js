@@ -1,4 +1,4 @@
-import "./styles/application.scss";
+import "../styles/application.scss";
 
 import Navigation from "./components/Navigation";
 import LazyImages from "./components/LazyImages";

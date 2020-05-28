@@ -1,15 +1,14 @@
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 require("dotenv").config();
 
 module.exports = (env) => {
-  const isDev = env.MODE === "development";
-  const dist = isDev
-    ? `backend/wp-content/themes/${process.env.THEME_NAME}/assets`
-    : "frontend/assets";
+  const { THEME_NAME } = process.env;
+  const dist = `backend/wp-content/themes/${THEME_NAME}`;
   return {
     mode: env.MODE,
-    entry: "./src/index.js",
+    entry: "./src/scripts/index.js",
     output: {
       filename: "app.js",
       path: path.resolve(__dirname, dist),
@@ -40,6 +39,9 @@ module.exports = (env) => {
       ],
     },
     plugins: [
+      new CopyPlugin({
+        patterns: [{ from: "./src/templates", to: "" }],
+      }),
       new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional
