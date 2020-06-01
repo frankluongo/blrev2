@@ -13,7 +13,7 @@
     "watch": "webpack --watch --env.MODE=development",
     "build": "webpack --env.MODE=development",
     "deploy": "webpack --env.MODE=production && cd backend/wp-content/themes && zip -r brotherlyloveproperties.zip brotherlyloveproperties",
-    "deploy:plugin": "zip -r brotherlyloveproperties.zip plugin"
+    "deploy:plugin": "cp -R plugin brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties"
   },
   "repository": {
     "type": "git",
