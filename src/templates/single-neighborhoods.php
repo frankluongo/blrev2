@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+  get_header();
+  if (get_field('display_hero')) {
+  get_template_part('components/hero');
+  } else {
+?>
 <section class="formhero">
   <div class="formhero__container container">
     <div class="formhero-container__offer-form">
@@ -15,6 +20,7 @@
   </div>
 </section>
 <?php
+  }
   getBlocks(get_field('page_blocks'));
   getBlocks(get_field('page_blocks', 'option'));
   get_footer();

@@ -2,16 +2,38 @@
 if( function_exists('acf_add_local_field_group') ):
 
   $location = array (
-    array (
-      array (
-        'param' => 'post_type',
-        'operator' => '==',
-        'value' => 'page',
-      ),
-    ),
+    array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+    array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'page',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'neighborhoods',
+			),
+		),
   );
 
 // ============================================================================
+
+  $display_hero = array (
+    'key' => 'field_display_hero',
+    'label' => 'Display Hero?',
+    'name' => 'display_hero',
+    'type' => 'true_false',
+    'default_value' => 1
+  );
 
   $hero_heading = array (
     'key' => 'field_hero_heading',
@@ -54,6 +76,7 @@ if( function_exists('acf_add_local_field_group') ):
     'key' => 'group_hero_fields',
     'title' => 'Hero Settings',
     'fields' => array (
+      $display_hero,
       $hero_heading,
       $hero_image,
       $hero_tagline,
