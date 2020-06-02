@@ -19,6 +19,10 @@
     endif;
   ?>
   </section>
+  <section class="posts__pagination">
+    <?php previous_posts_link( '⬅️ Newer Posts' ); ?>
+    <?php next_posts_link( 'Older Posts ➡️' ); ?>
+  </section>
 </section>
 
 <?php get_footer(); ?>

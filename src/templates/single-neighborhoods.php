@@ -21,7 +21,7 @@
 </section>
 <?php
   }
-  getBlocks(get_field('page_blocks'));
   getBlocks(get_field('page_blocks', 'option'));
+  getBlocks(get_field('page_blocks'));
   get_footer();
 ?>
