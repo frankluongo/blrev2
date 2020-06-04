@@ -1,0 +1,13 @@
+.checkbox-item {
+  align-items: center;
+  display: flex;
+}
+
+.checkbox-item + .checkbox-item {
+  margin-top: 1rem;
+}
+
+.checkbox-item__svg svg {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
