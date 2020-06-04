@@ -23,6 +23,10 @@ $colors: (
   @extend .link;
 }
 
+.block--text + .block--grid {
+  padding-top: 0;
+}
+
 @each $color, $colorVar in $colors {
   .block--bg-#{$color} {
     background-color: $colorVar;
@@ -35,6 +39,10 @@ $colors: (
 @include breakpoint("medium") {
   .block {
     @include block-spacing("padding", 4rem);
+  }
+
+  .block--text + .block--grid {
+    padding-top: 0;
   }
 
   .block h2:not(.h2) {

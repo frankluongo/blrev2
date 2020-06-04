@@ -26,7 +26,6 @@
     if ($blocks) {
       foreach ($blocks as &$block) {
         $blockName = $block['acf_fc_layout'];
-        console_log($block);
         include(locate_template("components/$blockName.php"));
       }
     }

@@ -1,4 +1,4 @@
-<section class="block block--bg-<?php echo $block['bgColor'] ?> block--text-<?php echo $block['textColor']; ?>">
+<section class="block block--bg-<?php echo $block['bgColor'] ?> block--text-<?php echo $block['textColor']; ?> block--grid">
   <div class="container">
     <div class="grid-block">
       <?php
