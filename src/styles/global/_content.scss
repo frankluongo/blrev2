@@ -13,9 +13,13 @@
 
   ul {
     padding: 1rem;
+
+    list-style: disc;
   }
 
   li {
+    line-height: 1.618;
+
     margin-bottom: 1rem;
   }
 
