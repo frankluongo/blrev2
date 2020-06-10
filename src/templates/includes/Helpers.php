@@ -30,3 +30,11 @@
       }
     }
   }
+
+  function getNavItems($theme_location) {
+    $locations = get_nav_menu_locations();
+    if (!array_key_exists($theme_location, $locations)) return false;
+    $menu = get_term( $locations[$theme_location], 'nav_menu' );
+    $items = wp_get_nav_menu_items($menu->term_id);
+    return $items;
+  }

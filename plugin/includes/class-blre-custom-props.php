@@ -16,6 +16,7 @@ class Blre_Custom_Props {
     $this->define_public_hooks();
     $this->add_theme_supports();
     $this->add_options_page();
+    $this->add_menus();
 	}
 	private function load_dependencies() {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-blre-custom-props-loader.php';
@@ -83,6 +84,18 @@ class Blre_Custom_Props {
       $this->build_options_page('Theme Settings', 'theme-general-settings');
       $this->build_options_page('Neighborhoods', 'hood-settings');
     }
+  }
+
+  public function add_menus() {
+    function register_menus() {
+      register_nav_menus(
+        array(
+          'headerNav' => __('Header Menu'),
+          'footerNav' => __('Footer Menu'),
+        )
+      );
+    }
+    add_action('init', 'register_menus');
   }
 
 }
