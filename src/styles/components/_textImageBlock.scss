@@ -15,6 +15,11 @@
   max-width: 100%;
 }
 
+.text-image__text p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @include breakpoint(medium) {
   .text-image {
     gap: 2rem;
