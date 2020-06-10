@@ -1,0 +1,14 @@
+:root {
+  @each $num, $color in $primary-colorscale {
+    --primary-#{$num}: #{map-get($primary-colorscale, $num)};
+  }
+  @each $num, $color in $secondary-colorscale {
+    --secondary-#{$num}: #{map-get($secondary-colorscale, $num)};
+  }
+  @each $num, $color in $tertiary-colorscale {
+    --tertiary-#{$num}: #{map-get($tertiary-colorscale, $num)};
+  }
+  @each $num, $color in $gray-colorscale {
+    --gray-#{$num}: #{map-get($gray-colorscale, $num)};
+  }
+}
