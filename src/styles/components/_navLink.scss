@@ -2,6 +2,8 @@
   position: relative;
 
   display: block;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 
   color: primaryColor(5);
   font-weight: bold;
@@ -12,6 +14,10 @@
 
   @include transition;
   @include underline-link;
+}
+
+.navigation-list__item {
+  position: relative;
 }
 
 .navigation-list__item:first-of-type .navigation-link {
@@ -37,5 +43,57 @@
     background-color: grayColor(1);
     border: 1px solid grayColor(3);
     box-shadow: 0 3px 0 0 grayColor(3);
+  }
+}
+
+.navigation-list__item[data-submenu-item] .navigation-link svg {
+  height: 1rem;
+
+  fill: currentColor;
+}
+
+.navigation-submenu__link {
+  position: relative;
+
+  display: block;
+  padding: 1rem;
+
+  color: primaryColor(5);
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.navigation-submenu__link:hover,
+.navigation-submenu__link:focus {
+  background-color: grayColor(1);
+}
+
+@include breakpoint("large-down") {
+  .navigation-list-submenu__item {
+    margin-top: 1rem;
+  }
+}
+
+@include breakpoint(large) {
+  .navigation-list-submenu__item {
+    border-bottom: 1px solid grayColor(4);
+  }
+
+  .navigation-list-submenu__item:last-of-type {
+    border-bottom: none;
+  }
+
+  .navigation-submenu__link {
+    background-color: grayColor(2);
+    @include transition;
+  }
+
+  .navigation-submenu__link:hover,
+  .navigation-submenu__link:focus {
+    background-color: grayColor(1);
   }
 }

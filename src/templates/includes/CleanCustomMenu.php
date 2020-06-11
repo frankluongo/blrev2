@@ -42,6 +42,7 @@ $this->menuMarkup .= <<< EOD
 <li class="navigation-list__item" {$this->checkForSubmenu($item)}>
   <a class="navigation-link" href="$item->url" target="$item->target" {$this->checkForTarget($item->target)}>
     $item->title
+    {$this->displayIcon($item)}
   </a>
 EOD;
   }
@@ -52,8 +53,8 @@ EOD;
       $this->menuMarkup .= "\n<ul class=\"navigation-list__submenu\" data-submenu-list>\n";
     }
 $this->menuMarkup .= <<< EOD
-<li class="navigation-list__item navigation-list-submenu__item">
-  <a class="navigation-link" href="$item->url" target="$item->target" {$this->checkForTarget($item->target)}>
+<li class="navigation-list-submenu__item">
+  <a class="navigation-submenu__link" href="$item->url" target="$item->target" {$this->checkForTarget($item->target)}>
     $item->title
   </a>
 </li>
@@ -77,6 +78,18 @@ EOD;
     $nextItem = $this->items[$next];
     if(intval($nextItem->menu_item_parent) === $itemId) {
       return "data-submenu-item role=\"button\"";
+    }
+  }
+
+  function displayIcon($item) {
+    $itemId = $item->ID;
+    $next = $this->count+1;
+    if ($this->isTooLong($next)) return "";
+    $nextItem = $this->items[$next];
+    if(intval($nextItem->menu_item_parent) === $itemId) {
+      ob_start();
+      include(locate_template('svgs/caretDown.php'));
+      return ob_get_clean();
     }
   }
 

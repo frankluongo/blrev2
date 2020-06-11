@@ -7,6 +7,10 @@
 }
 
 @include breakpoint("large-down") {
+  body[data-active-toggle="true"] {
+    overflow: hidden;
+  }
+
   .navigation {
     position: fixed;
     top: 0;
@@ -21,6 +25,7 @@
     text-align: center;
 
     background-color: grayColor(1);
+    overflow-y: scroll;
     @include transition;
 
     &[data-active-toggle="true"] {
@@ -54,6 +59,8 @@
     @include block-spacing("padding", 2rem);
 
     text-align: center;
+
+    background-color: primaryColor(4);
   }
 }
 
@@ -74,5 +81,29 @@
 
   .navigation__contact-info {
     flex: 1 1 auto;
+  }
+
+  .navigation-list__submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    border: 1px solid grayColor(4);
+    border-radius: 0.25rem;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    @include transition;
+  }
+
+  .navigation-list__submenu--active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@include breakpoint(large) {
+  .navigation-list__submenu {
+    min-width: 16rem;
   }
 }

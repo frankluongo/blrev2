@@ -12,7 +12,7 @@ export default class Navigation {
   getElements() {
     this.navigation = navigation();
     this.toggleBtn = toggleBtn();
-    this.navElements = [this.navigation, this.toggleBtn];
+    this.navElements = [this.navigation, this.toggleBtn, document.body];
   }
 
   observeEvents() {
