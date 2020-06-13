@@ -6,6 +6,14 @@ export function observeDropdownItem(item) {
   const isDesktop = window.matchMedia("(min-width: 1280px)");
   const submenu = dropdownMenu(item);
   const link = dropdownMenuLink(item);
+
+  const itemLeft = item.getBoundingClientRect().left;
+  const itemRight = item.getBoundingClientRect().right;
+  const submenuLeft = submenu.getBoundingClientRect().left;
+  const submenuRight = submenu.getBoundingClientRect().right;
+  if (itemLeft === submenuLeft) submenu.classList.add("is-start");
+  if (itemRight === submenuRight) submenu.classList.add("is-end");
+
   checkForDesktop();
   const boundMouseMove = handleDocumentMouseMove.bind(null, { item, submenu });
   const boundFocusHandler = handleDocumentFocus.bind(null, { item, submenu });
@@ -47,11 +55,13 @@ export function observeDropdownItem(item) {
     }
   }
   async function displaySubmenu() {
+    item.classList.add("navigation-list__item--active");
     submenu.removeAttribute("style");
     await wait(0);
     submenu.classList.add("navigation-list__submenu--active");
   }
   async function hideSubmenu() {
+    item.classList.remove("navigation-list__item--active");
     submenu.classList.remove("navigation-list__submenu--active");
     await wait(150);
     submenu.style.display = "none";
