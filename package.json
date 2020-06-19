@@ -13,7 +13,8 @@
     "watch": "webpack --watch --env.MODE=development",
     "build": "webpack --env.MODE=development",
     "deploy": "webpack --env.MODE=production && cd backend/wp-content/themes && zip -r brotherlyloveproperties.zip brotherlyloveproperties",
-    "deploy:plugin": "cp -R plugin brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties"
+    "deploy:plugin": "cp -R plugin brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties",
+    "start": "concurrently \"npm run backend\" \"npm run watch\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/frankluongo/modern-wordpress-theme-template#readme",
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
     "dotenv": "^8.2.0",

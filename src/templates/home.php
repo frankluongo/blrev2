@@ -7,7 +7,8 @@
   </div>
   <section class="posts">
   <?php
-    $args = array('post_type' => 'post', 'post_status' => 'publish');
+    $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+    $args = array('post_type' => 'post', 'post_status' => 'publish', 'paged' => $paged,);
     $posts = new WP_Query($args);
     if($posts->have_posts() ) :
       while ( $posts->have_posts() ) :
