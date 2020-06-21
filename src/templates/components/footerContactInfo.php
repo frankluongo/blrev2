@@ -23,7 +23,7 @@
         &nbsp;or&nbsp;
         <a
           class="link underline text-primary-4"
-          href="<?php the_field('theme_options_phone_number', 'option'); ?>"
+          href="tel:<?php the_field('theme_options_phone_number', 'option'); ?>"
           rel="noopener noreferrer"
           target="blank"
         >

@@ -3,19 +3,19 @@ $paragraphs: ("p", ".p");
 #{$paragraphs} {
   max-width: $settings-max-paragraph-length;
 
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.618;
-  @include font-size-increments($mediumSize: 1rem);
+  @include font-size-increments($mediumSize: 1.2rem);
 
   &.small {
-    font-size: 0.75rem;
-    @include font-size-increments($mediumSize: 0.875rem);
+    font-size: 0.875rem;
+    @include font-size-increments($mediumSize: 1rem);
   }
 
   &.large {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    @include font-size-increments($mediumSize: 1.5rem);
+    @include font-size-increments($mediumSize: 1.75rem);
   }
 }
 

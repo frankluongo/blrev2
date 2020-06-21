@@ -4,13 +4,14 @@ h1,
   font-size: 2.85rem;
   font-weight: 700;
   letter-spacing: 0;
+  line-height: 1.1;
 
   @include font-size-increments($mediumSize: 6rem);
 
   &.small {
     font-size: 2.75rem;
 
-    @include font-size-increments($mediumSize: 3rem);
+    @include font-size-increments($mediumSize: 3.75rem);
   }
 }
 
@@ -55,6 +56,7 @@ h3,
   font-family: map-get($setting-fonts, secondary);
   font-size: 1.5rem;
   font-weight: bold;
+  line-height: 1.25;
 
   @include font-size-increments($mediumSize: 1.5rem, $largeSize: 2rem);
 }
