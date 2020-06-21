@@ -3,7 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 require("dotenv").config();
 
-module.exports = (env) => {
+const themeConfig = (env) => {
   const { THEME_NAME } = process.env;
   const dist = `backend/wp-content/themes/${THEME_NAME}`;
   return {
@@ -50,4 +50,28 @@ module.exports = (env) => {
       }),
     ],
   };
+};
+
+const pluginConfig = (env) => {
+  const dist = `backend/wp-content/plugins/brotherlyloveproperties/admin/js`;
+  return {
+    mode: env.MODE,
+    entry: "./plugin/admin/js/index.js",
+    output: {
+      filename: "app.js",
+      path: path.resolve(__dirname, dist),
+    },
+    module: {
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: ["css-loader", "sass-loader"],
+        },
+      ],
+    },
+  };
+};
+
+module.exports = (env) => {
+  return [themeConfig(env), pluginConfig(env)];
 };

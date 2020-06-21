@@ -32,7 +32,7 @@ class Blre_Custom_Props {
 	private function define_admin_hooks() {
 		$plugin_admin = new Blre_Custom_Props_Admin( $this->get_plugin_name(), $this->get_version() );
 		// $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		// $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 	}
 	private function define_public_hooks() {
 		$plugin_public = new Blre_Custom_Props_Public( $this->get_plugin_name(), $this->get_version() );
