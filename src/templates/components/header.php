@@ -1,7 +1,10 @@
 <header class="header">
   <div class="header__content container">
     <section class="header__logo">
-      <a href="<?php echo get_home_url(); ?>">
+      <a
+        href="<?php echo get_home_url(); ?>"
+        data-home-link
+      >
         <?php get_template_part('svgs/logo'); ?>
       </a>
     </section>

@@ -17,6 +17,7 @@
           href="mailto:<?php the_field('theme_options_email_address', 'option'); ?>"
           rel="noopener noreferrer"
           target="blank"
+          data-footer-contact-email-link
         >
           Send us an email
         </a>
@@ -26,6 +27,7 @@
           href="tel:<?php the_field('theme_options_phone_number', 'option'); ?>"
           rel="noopener noreferrer"
           target="blank"
+          data-footer-contact-call-link
         >
           Give us a call
         </a>

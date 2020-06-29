@@ -12,6 +12,8 @@
           class="navigation-link"
           href="<?php echo $link['url'] ?>"
           target="<?php echo $link['target']; ?>"
+          data-nav-link
+          data-link="<?php echo $link['title']; ?>"
           <?php if ($link['target'] === 'blank') { echo 'rel="noopener noreferrer"'; } ?>
         >
           <?php echo $link['title']; ?>

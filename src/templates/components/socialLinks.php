@@ -6,6 +6,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Check out Brotherly Love Real Estate on Facebook"
+      data-social-link-facebook
     >
       <?php get_template_part('svgs/facebook'); ?>
     </a>
@@ -17,6 +18,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Check out Brotherly Love Real Estate on Instagram"
+      data-social-link-instagram
     >
       <?php get_template_part('svgs/instagram'); ?>
     </a>
@@ -28,6 +30,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Check out Brotherly Love Real Estate on Twitter"
+      data-social-link-twitter
     >
       <?php get_template_part('svgs/twitter'); ?>
     </a>
@@ -39,6 +42,7 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Check out Brotherly Love Real Estate on YouTube"
+      data-social-link-youtube
     >
       <?php get_template_part('svgs/youtube'); ?>
     </a>

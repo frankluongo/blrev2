@@ -21,7 +21,11 @@
         <h3 class="process-step__heading process-step__heading--small h2 h2--light">
           Ready to get started?
         </h3>
-        <a class="button default primary process-step__button full-width" href="mailto:<?php the_field('theme_options_email_address', 'option'); ?>">
+        <a
+          class="button default primary process-step__button full-width"
+          href="mailto:<?php the_field('theme_options_email_address', 'option'); ?>"
+          data-get-in-touch-link
+        >
           Get In Touch
         </a>
       </div>

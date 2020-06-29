@@ -40,7 +40,13 @@ class CleanCustomMenu {
   function renderRegularItem($item) {
 $this->menuMarkup .= <<< EOD
 <li class="navigation-list__item" {$this->checkForSubmenu($item)}>
-  <a class="navigation-link" href="$item->url" target="$item->target" {$this->checkForTarget($item->target)}>
+  <a
+    class="navigation-link" href="$item->url"
+    target="$item->target"
+    {$this->checkForTarget($item->target)}
+    data-header-nav-link
+    data-header-link="$item->title"
+  >
     $item->title
     {$this->displayIcon($item)}
   </a>
@@ -54,7 +60,14 @@ EOD;
     }
 $this->menuMarkup .= <<< EOD
 <li class="navigation-list-submenu__item">
-  <a class="navigation-submenu__link" href="$item->url" target="$item->target" {$this->checkForTarget($item->target)}>
+  <a
+    class="navigation-submenu__link"
+    href="$item->url"
+    target="$item->target"
+    {$this->checkForTarget($item->target)}
+    data-header-nav-link
+    data-header-link="$item->title"
+  >
     $item->title
   </a>
 </li>

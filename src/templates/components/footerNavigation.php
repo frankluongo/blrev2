@@ -2,7 +2,12 @@
 <ul class="footer__navigation">
   <?php foreach($links as &$link) { $item = $link['footer_navigation_link_url']; ?>
     <li class="footer-navigation__item">
-    <a class="footer-navigation-item__link link underline" href="<?php echo $item['url'] ?>">
+    <a
+      class="footer-navigation-item__link link underline"
+      href="<?php echo $item['url'] ?>"
+      data-footer-nav-link
+      data-footer-link="<?php echo $item['title']; ?>"
+    >
       <?php echo $item['title'] ?>
     </a>
   </li>

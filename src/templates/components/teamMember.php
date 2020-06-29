@@ -17,6 +17,8 @@
       href="mailto:<?php the_field('team_members_member_email_address'); ?>"
       rel="noopener noreferrer"
       target="_blank"
+      data-team-member-link
+      data-team-member-link-person="<?php the_field('team_members_member_name'); ?>"
     >
       Send <?php firstName(get_field('team_members_member_name')); ?> an Email
     </a>
