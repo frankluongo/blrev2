@@ -1,5 +1,6 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
+require("dotenv").config();
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 require("dotenv").config();
 
@@ -53,25 +54,45 @@ const themeConfig = (env) => {
 };
 
 const pluginConfig = (env) => {
-  const dist = `backend/wp-content/plugins/brotherlyloveproperties/admin/js`;
+  const dist = `${process.env.PLUGIN_DIST}/${process.env.PLUGIN_NAME}`;
   return {
     mode: env.MODE,
-    entry: "./plugin/admin/js/index.js",
+    entry: `${process.env.PLUGIN_PATH}/scripts/index.js`,
     output: {
-      filename: "app.js",
+      filename: "plugin.js",
       path: path.resolve(__dirname, dist),
     },
     module: {
-      rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          use: ["css-loader", "sass-loader"],
-        },
-      ],
+      rules: commonRules,
+    },
+    plugins: [
+      new CopyPlugin({
+        patterns: [
+          {
+            from: `${process.env.PLUGIN_PATH}/templates`,
+            to: "",
+          },
+        ],
+      }),
+    ],
+  };
+};
+
+const pluginAdminConfig = (env) => {
+  const dist = `${process.env.PLUGIN_DIST}/${process.env.PLUGIN_NAME}/admin/js`;
+  return {
+    mode: env.MODE,
+    entry: `${process.env.PLUGIN_PATH}/scripts/admin.js`,
+    output: {
+      filename: "admin.js",
+      path: path.resolve(__dirname, dist),
+    },
+    module: {
+      rules: commonRules,
     },
   };
 };
 
 module.exports = (env) => {
-  return [themeConfig(env), pluginConfig(env)];
+  return [themeConfig(env), pluginConfig(env), pluginAdminConfig(env)];
 };

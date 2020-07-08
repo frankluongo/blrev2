@@ -12,8 +12,8 @@
     "cert:setup": "cd cli && ./setup-hosts-file.sh",
     "watch": "webpack --watch --env.MODE=development",
     "build": "webpack --env.MODE=development",
-    "deploy": "webpack --env.MODE=production && cd backend/wp-content/themes && zip -r brotherlyloveproperties.zip brotherlyloveproperties",
-    "deploy:plugin": "cp -R plugin brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties",
+    "deploy:theme": "webpack --env.MODE=production && cp -R backend/wp-content/themes/brotherlyloveproperties brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties",
+    "deploy:plugin": "webpack --env.MODE=production && cp -R backend/wp-content/plugins/brotherlyloveproperties brotherlyloveproperties && zip -r brotherlyloveproperties.zip brotherlyloveproperties && rm -R brotherlyloveproperties",
     "start": "concurrently \"npm run backend\" \"npm run watch\""
   },
   "repository": {
