@@ -1,5 +1,5 @@
 import "../styles/app.scss";
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("working!");
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   console.log("working!");
+// });

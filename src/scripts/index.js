@@ -6,6 +6,7 @@ import PatternBackground from "./components/PatternBackground";
 import SmoothScroll from "./components/SmoothScroll";
 import { importFonts } from "./components/FontImports";
 import dropdownMenu from "./components/DropdownMenu";
+import podioForms from "./components/PodioForm";
 
 const init = () => {
   dropdownMenu();
@@ -13,6 +14,7 @@ const init = () => {
   new Navigation();
   new PatternBackground();
   new SmoothScroll();
+  podioForms();
   importFonts();
 };
 

@@ -7,9 +7,9 @@
  * @package           CustomPlugin
  *
  * @wordpress-plugin
- * Plugin Name:       Custom Plugin
- * Plugin URI:        --
- * Description:       This Plugin does dope stuff
+ * Plugin Name:       Brotherly Love Real Estate
+ * Plugin URI:        brotherlyloveproperties.com
+ * Description:       This plugin add all custom functionality used on brotherlyloveproperties.com
  * Version:           1.0.0
  * Author:            Frank Luongo
  * Author URI:        frankluongo.com
@@ -40,6 +40,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/CustomPlugin.php';
 function runnit() {
 	$plugin = new CustomPlugin();
   $plugin->run();
+  require plugin_dir_path( __FILE__ ) . 'post-types/all.php';
+  require plugin_dir_path( __FILE__ ) . 'custom-fields/all.php';
   flush_rewrite_rules();
 }
 runnit();

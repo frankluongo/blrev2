@@ -4,6 +4,21 @@ require("dotenv").config();
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 require("dotenv").config();
 
+const commonRules = [
+  {
+    test: /\.s[ac]ss$/i,
+    use: ["style-loader", "css-loader", "sass-loader"],
+  },
+  {
+    test: /\.(png|svg|jpg|gif)$/,
+    use: ["file-loader"],
+  },
+  {
+    test: /\.(woff|woff2|eot|ttf|otf)$/,
+    use: ["file-loader"],
+  },
+];
+
 const themeConfig = (env) => {
   const { THEME_NAME } = process.env;
   const dist = `backend/wp-content/themes/${THEME_NAME}`;
