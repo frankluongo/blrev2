@@ -4,6 +4,7 @@
       if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
         wp_deregister_script( 'wp-embed' );
         wp_register_script('app', get_template_directory_uri() . '/app.js');
+        wp_localize_script( 'app', 'ajaxData', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' )));
         wp_enqueue_script('app');
       }
     }

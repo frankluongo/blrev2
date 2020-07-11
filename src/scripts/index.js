@@ -7,6 +7,7 @@ import SmoothScroll from "./components/SmoothScroll";
 import { importFonts } from "./components/FontImports";
 import dropdownMenu from "./components/DropdownMenu";
 import podioForms from "./components/PodioForm";
+window.ajaxUrl = ajaxData.ajaxUrl;
 
 const init = () => {
   dropdownMenu();
