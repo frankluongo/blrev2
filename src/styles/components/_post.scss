@@ -4,9 +4,31 @@
 
 .post__inner {
   display: block;
-  padding: 1rem;
 
   text-decoration: none;
+}
+
+.post__inner:not(.post__inner--offmarket),
+.post__content {
+  padding: 1rem;
+}
+
+.post__thumbnail-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.post__thumbnail-wrapper img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
 }
 
 .post__title {
@@ -15,8 +37,16 @@
   color: primaryColor();
 }
 
+.post__title--offmarket {
+  margin-bottom: 0;
+
+  color: grayColor(9);
+  font-weight: bold;
+}
+
 .post__text,
-.post__excerpt p {
+.post__excerpt p,
+.post__price {
   color: grayColor(9);
 }
 
@@ -24,8 +54,12 @@
   margin-top: 1rem;
 }
 
+.post__price {
+  margin-bottom: 1rem;
+}
+
 @include breakpoint(medium) {
-  .post__inner {
+  .post__inner:not(.post__inner--offmarket) {
     padding: 2rem;
   }
 }

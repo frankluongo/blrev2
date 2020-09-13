@@ -9,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       Brotherly Love Real Estate
  * Plugin URI:        brotherlyloveproperties.com
- * Description:       This plugin add all custom functionality used on brotherlyloveproperties.com
+ * Description:       This plugin add all custom functionality used on BLRE
  * Version:           1.0.0
  * Author:            Frank Luongo
  * Author URI:        frankluongo.com

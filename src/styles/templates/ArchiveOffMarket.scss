@@ -1,0 +1,47 @@
+.off-market-wrapper {
+  @include block-spacing("padding", 2rem);
+}
+
+.off-market {
+  display: grid;
+  gap: 2rem;
+}
+
+.off-market-main__header {
+  margin-bottom: 2rem;
+}
+
+.off-market-main__posts {
+  display: grid;
+  gap: 1rem;
+}
+
+@include breakpoint(medium-down) {
+  .off-market__aside {
+    order: 1;
+  }
+}
+
+@include breakpoint(small) {
+  .off-market-main__posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include breakpoint(medium) {
+  .off-market-wrapper {
+    @include block-spacing("padding", 4rem);
+  }
+  .off-market {
+    grid-template-columns: 1fr 2fr;
+  }
+  .off-market-main__posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include breakpoint(large) {
+  .off-market {
+    grid-template-columns: 1fr 3fr;
+  }
+}
