@@ -6,7 +6,7 @@
 <div class="off-market-wrapper">
 <section class="container off-market">
   <aside class="off-market__aside">
-    <?php get_template_part('components/cashOffer'); ?>
+    <?php get_template_part('components/investForm'); ?>
   </aside>
   <article class="off-market__main">
   <header class="off-market-main__header"><h2 class="h3">Off Market Real Estate</h2></header>
