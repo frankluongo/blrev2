@@ -23,10 +23,10 @@
         <label class="form__label form__label--input" for="address-field">Address</label>
         <input class="form__input form__input--text" type="text" name="fields[address]" id="address-field" required>
       </div>
-      <div class="form__section">
+      <!-- <div class="form__section">
         <label class="form__label form__label--input" for="email-address-field">Email Address</label>
         <input class="form__input form__input--email" type="email" name="fields[email-address]" id="email-address-field" required>
-      </div>
+      </div> -->
       <div class="form__section">
         <label class="form__label form__label--input" for="phone-number-field">Phone Number</label>
         <input class="form__input form__input--tel" type="tel" name="fields[phone-number]" id="phone-number-field" required>
